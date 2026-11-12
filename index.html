@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Pixel OS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- TOP STATUS BAR -->
+  <div class="top-bar interactive">
+    <div class="status-left">
+      <span class="neon-cyan">WIFI: ON</span>
+      <div class="battery-box"><div id="battery-fill"></div></div>
+      <span id="battery-text" class="neon-green">100%</span>
+    </div>
+    <div id="clock" class="clock">00:00:00</div>
+    <div class="status-right">
+      <div>REAL TIME: <span class="neon-pink">0 Mms</span></div>
+      <div>NET TRAFFIC: <span class="neon-cyan">ONLINE ..||</span></div>
+    </div>
+  </div>
+
+  <!-- AREA WIDGET KIRI -->
+  <div class="widget-grid">
+    <div class="pixel-window interactive">
+      <div class="window-header"><span>WEATHER RADAR</span><span class="close-btn">[X]</span></div>
+      <div class="window-body">
+        <div class="weather-status"><span>RAINY</span><span class="neon-cyan">CYBER/CITY</span></div>
+        <div class="rain-box">☁️ /// ☁️</div>
+      </div>
+    </div>
+
+    <div class="pixel-window interactive">
+      <div class="window-header"><span>SYSTEM MONITOR</span><span class="close-btn">[X]</span></div>
+      <div class="window-body sys-body">
+        <div class="cpu-circle"><span id="cpu-val">0%</span><small>CPU</small></div>
+        <div class="ram-box"><span id="ram-val" class="neon-cyan">RAM: 0%</span></div>
+      </div>
+    </div>
+
+    <div class="pixel-window wide-window interactive">
+      <div class="window-header"><span>MINI TERMINAL WIDGET</span><span class="close-btn">[X]</span></div>
+      <div class="window-body">
+        <div class="sys-log-title">SYS_LOG // LIVE_MATRIX</div>
+        <div id="matrix-log" class="matrix-text"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AREA BAWAH -->
+  <div class="bottom-area">
+    <div class="pixel-window bottom-widget interactive">
+      <div class="window-header"><span>CYBER-DECK TERMINAL</span><span>[X]</span></div>
+      <div class="window-body terminal-input-box">
+        <span class="neon-green">></span>
+        <input type="text" id="cmd-input" placeholder="ketik 'code', 'calc', 'explorer'..." />
+      </div>
+    </div>
+
+    <div class="dock-wrapper interactive">
+      <div class="pixel-bot" id="pixel-bot">🤖</div>
+      <div class="dock-label">BOTTOM APP DOCK</div>
+      <div class="app-dock">
+        <button class="dock-icon" onclick="openApp('explorer')">📁</button>
+        <button class="dock-icon active" onclick="openApp('start cmd')">❯_</button>
+        <button class="dock-icon" onclick="openApp('start chrome')">🌐</button>
+        <button class="dock-icon" onclick="openApp('code')">📝</button>
+        <button class="dock-icon" onclick="openApp('start spotify:')">🎵</button>
+      </div>
+    </div>
+
+    <div class="pixel-window bottom-widget interactive">
+      <div class="window-header"><span>INTER-DECK PIXEL BOT</span><span>[X]</span></div>
+      <div class="window-body">
+        <span id="bot-msg" class="neon-green">STATUS: STANDBY @$</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
